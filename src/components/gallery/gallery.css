@@ -1,0 +1,53 @@
+.gallery_main {
+  position: absolute;
+  justify-content: center;
+}
+.wallpaper {
+  align-items: center;
+  width: 100%;
+}
+.wallpaper img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.still_1 {
+  padding-top: 0.25%;
+  display: inline-flex;
+  width: 33%;
+}
+.still_2 {
+  padding-top: 0.25%;
+
+  padding-left: 0.5%;
+  display: inline-flex;
+  width: 33%;
+}
+.still_3 {
+  padding-top: 0.25%;
+
+  padding-left: 0.5%;
+  display: inline-flex;
+  width: 33%;
+}
+.still_1 img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.still_2 img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.still_3 img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.alphabet {
+  padding-top: 0.25%;
+  align-items: center;
+  width: 100%;
+}
+.alphabet img {
+  max-width: 100%;
+  max-height: 100%;
+}

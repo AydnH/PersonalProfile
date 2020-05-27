@@ -1,0 +1,16 @@
+.main_container {
+  text-align: center;
+}
+.skills_container {
+  position: absolute;
+  display: inline-block;
+}
+.list {
+  text-align: center;
+  padding-top: 2em;
+  display: inline;
+  color: #c0c0c0;
+}
+.title {
+  text-decoration: underline;
+}

@@ -1,0 +1,22 @@
+.ContactForm_Master {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+label {
+  color: #c0c0c0;
+  position: absolute;
+  text-align: center;
+}
+.form-group {
+  padding-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

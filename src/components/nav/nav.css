@@ -1,0 +1,46 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #c0c0c0;
+  height: 44px;
+  opacity: 80%;
+}
+.navbar_navigation {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.navbar_logo a {
+  color: white;
+  opacity: 120%;
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.navbar_navigation_items ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.navbar_navigation_items li {
+  opacity: 120%;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.navbar_navigation_items a {
+  opacity: 120%;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.navbar_navigation_items a:hover,
+.navbar_navigation_items a:active {
+  color: pink;
+}
+.navbar_logo a:hover,
+.navbar_logo a:active {
+  color: pink;
+}

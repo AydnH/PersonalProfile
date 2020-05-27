@@ -1,0 +1,13 @@
+.profile_container {
+  display: inline-flex;
+}
+.profile_image {
+  display: inline-flex;
+}
+h1 {
+  color: #c0c0c0;
+  padding-top: 1.75em;
+  padding-left: 1em;
+  display: inline-flex;
+  position: relative;
+}

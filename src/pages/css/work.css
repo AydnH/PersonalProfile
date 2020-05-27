@@ -1,0 +1,11 @@
+.heading {
+  margin-left: 5%;
+  text-align: center;
+  position: absolute;
+}
+.gallery {
+  justify-content: center;
+  margin-left: 25%;
+  position: relative;
+  width: 50%;
+}

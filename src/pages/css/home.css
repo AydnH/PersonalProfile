@@ -1,0 +1,41 @@
+.homepage {
+  margin-top: 0;
+  position: absolute;
+}
+.page_body {
+  display: flex;
+}
+
+.image {
+  display: flex;
+}
+.about {
+  margin-left: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skills {
+  padding-top: 5%;
+  margin-left: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact {
+  color: #c0c0c0;
+  margin-left: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: flex;
+  text-decoration: none;
+  text-align: center;
+}
+.link a {
+  display: flex;
+  text-decoration: none;
+  margin-left: 25%;
+  text-align: center;
+  justify-content: center;
+  color: #c0c0c0;
+}
