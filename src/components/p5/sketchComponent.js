@@ -27,7 +27,7 @@ export default class Sketch extends React.Component {
 
       for (var i = 0; i < cols; i++) {
         for (var j = 0; j < rows - (i % 2); j++) {
-          var cell = new p.Cell(i, j);
+          var cell = new Cell(i, j);
           grid.push(cell);
           console.log(cell);
         }
@@ -55,30 +55,32 @@ export default class Sketch extends React.Component {
       }
       p.endShape(p.CLOSE);
     };
-    p.Cell = (i, j) => {
-      this.i = i;
-      this.j = j;
+    class Cell {
+      constructor(i, j) {
+        this.i = i;
+        this.j = j;
 
-      if (j % 2 === 0) {
-        this.x = this.i * cellSize * 2 + xOffset;
-      } else {
-        this.x = this.i * cellSize * 2 + cellSize + xOffset;
+        if (j % 2 === 0) {
+          this.x = this.i * cellSize * 2 + xOffset;
+        } else {
+          this.x = this.i * cellSize * 2 + cellSize + xOffset;
+        }
+
+        this.y = this.j * cellSize * 1.7 + yOffset;
+
+        this.show = function () {
+          var alph = p.int(p.random(0, 17));
+          p.stroke(211, 211, 211, alph);
+          p.noFill();
+
+          p.push();
+          p.translate(this.x, this.y);
+          p.rotate(p.radians(30));
+          p.polygon(0, 0, cellSize, 6);
+          p.pop();
+        };
       }
-
-      this.y = this.j * cellSize * 1.7 + yOffset;
-
-      this.show = function () {
-        var alph = p.int(p.random(0, 17));
-        p.stroke(211, 211, 211, alph);
-        p.noFill();
-
-        p.push();
-        p.translate(this.x, this.y);
-        p.rotate(p.radians(30));
-        p.polygon(0, 0, cellSize, 6);
-        p.pop();
-      };
-    };
+    }
   };
 
   componentDidMount() {
