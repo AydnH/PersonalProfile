@@ -30,8 +30,14 @@ export default class ContactForm extends React.Component {
       email: this.state.email,
       message: this.state.message,
     });
+    let data = {
+      name: this.state.name,
+      email: this.state.name,
+      message: this.state.message,
+    };
+    console.log(data);
     axios
-      .post("./api/postdata")
+      .post("http://localhost:3100/api/post", data)
       .then((res) => {
         this.setState({ sent: true });
       })
@@ -67,7 +73,6 @@ export default class ContactForm extends React.Component {
             <input
               type="email"
               className="form-control"
-              aria-describedby="emailHelp"
               value={this.state.email}
               onChange={this.onEmailChange.bind(this)}
               placeholder="email"
