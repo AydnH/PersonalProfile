@@ -1,7 +1,8 @@
 import React from "react";
+import axios from "axios";
 import "./contactform.css";
 
-class ContactForm extends React.Component {
+export default class ContactForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -9,6 +10,40 @@ class ContactForm extends React.Component {
       email: "",
       message: "",
     };
+  }
+  onNameChange(event) {
+    this.setState({ name: event.target.value });
+  }
+
+  onEmailChange(event) {
+    this.setState({ email: event.target.value });
+  }
+
+  onMessageChange(event) {
+    this.setState({ message: event.target.value });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    this.onSubmit = () => ({
+      name: this.state.name,
+      email: this.state.email,
+      message: this.state.message,
+    });
+    axios
+      .post("./api/postdata")
+      .then((res) => {
+        this.setState({ sent: true });
+      })
+      .catch(() => {
+        console.log("Message Failed");
+      });
+    this.setState({
+      name: "",
+      email: "",
+      message: "",
+    });
+    console.log(this.state);
   }
 
   render() {
@@ -56,20 +91,4 @@ class ContactForm extends React.Component {
       </div>
     );
   }
-
-  onNameChange(event) {
-    this.setState({ name: event.target.value });
-  }
-
-  onEmailChange(event) {
-    this.setState({ email: event.target.value });
-  }
-
-  onMessageChange(event) {
-    this.setState({ message: event.target.value });
-  }
-
-  handleSubmit(event) {}
 }
-
-export default ContactForm;

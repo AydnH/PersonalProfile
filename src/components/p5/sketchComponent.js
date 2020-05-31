@@ -4,14 +4,13 @@ import p5 from "p5";
 export default class Sketch extends React.Component {
   constructor(props) {
     super(props);
-    //p5 instance mode requires a reference on the DOM to mount the sketch
-    //So we use react's createRef function to give p5 a reference
+
+    //createRef function to give p5 a reference
     this.myRef = React.createRef();
   }
 
-  // This uses p5's instance mode for sketch creation and namespacing
+  // use p5 instance mode for sketch creation and namespacing
   Sketch = (p) => {
-    // Native p5 functions work as they would normally but prefixed with
     // a p5 object "p"
 
     var cellSize = 35;
@@ -20,7 +19,7 @@ export default class Sketch extends React.Component {
     var yOffset = 0;
 
     p.setup = () => {
-      //Everyhting that normally happens in setup works
+      // setup works
       p.createCanvas(p.displayWidth, p.displayWidth);
       var cols = p.displayWidth / 20;
       var rows = p.displayHeight / 20;
@@ -29,13 +28,12 @@ export default class Sketch extends React.Component {
         for (var j = 0; j < rows - (i % 2); j++) {
           var cell = new Cell(i, j);
           grid.push(cell);
-          console.log(cell);
         }
       }
     };
 
     p.draw = () => {
-      // And everything that normally goes in draw in here
+      // draw in here
       p.background(18, 18, 18);
       for (var i = 0; i < grid.length; i++) {
         grid[i].show();
@@ -84,13 +82,13 @@ export default class Sketch extends React.Component {
   };
 
   componentDidMount() {
-    //We create a new p5 object on component mount, feed it
+    //create a new p5 object on component mount
     this.myP5 = new p5(this.Sketch, this.myRef.current);
   }
 
   render() {
     return (
-      //This div will contain our p5 sketch
+      //This div contains p5 sketch
       <div ref={this.myRef}></div>
     );
   }
