@@ -3,9 +3,9 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #c0c0c0;
+  background-color: #212121;
   height: 44px;
-  opacity: 80%;
+  opacity: 40%;
 }
 .navbar_navigation {
   display: flex;

@@ -1,41 +1,51 @@
 .homepage {
-  margin-top: 0;
-  position: absolute;
-}
-.page_body {
-  display: flex;
+  height: 100%;
+  margin: 0;
 }
 
 .image {
   display: flex;
 }
-.about {
-  margin-left: 25%;
+.profile_section {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.skills {
-  padding-top: 5%;
-  margin-left: 25%;
+.about_section {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 5%;
+}
+.skill_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: %;
+}
+.contact_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+}
+.about {
+  max-width: 50%;
+}
+.skills {
 }
 .contact {
   color: #c0c0c0;
-  margin-left: 25%;
-  display: flex;
-  justify-content: center;
-  align-items: flex;
-  text-decoration: none;
   text-align: center;
 }
 .link a {
-  display: flex;
-  text-decoration: none;
-  margin-left: 25%;
-  text-align: center;
-  justify-content: center;
   color: #c0c0c0;
+  text-align: center;
+  text-decoration: none;
+}
+.github {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1%;
 }

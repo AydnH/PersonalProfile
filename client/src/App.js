@@ -8,6 +8,7 @@ import Skills from "./pages/skills.js";
 import Contact from "./pages/contact.js";
 import NavBar from "./components/nav/navBar.js";
 import Sketch from "./components/p5/sketchComponent.js";
+// import Footer from "./components/footer/footer.js";
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
 
         <NavBar />
       </div>
+      {/* <div className="footer">
+        <Footer />
+      </div> */}
     </HashRouter>
   );
 }

@@ -7,22 +7,14 @@ const Skills = (props) => (
     <div className="list">
       <h2 className="title">_SKILLS_</h2>
       <br />
-      <h2>REACT</h2>
-      <br />
       <h2>JAVASCRIPT</h2>
-      <br />
       <h2>HTML</h2>
-      <br />
       <h2>CSS</h2>
-      <br />
+      <h2>REACT</h2>
       <h2>JAVA</h2>
-      <br />
       <h2>PROCESSING</h2>
-      <br />
       <h2>PHOTOSHOP</h2>
-      <br />
       <h2>ILLUSTRATOR</h2>
-      <br />
     </div>
   </div>
 );

@@ -22,9 +22,21 @@ export default class ContactForm extends React.Component {
   onMessageChange(event) {
     this.setState({ message: event.target.value });
   }
+  validateEmail() {
+    let errors = {};
+    if (!this.state.email) {
+      errors.email = "Required";
+    } else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(this.state.email)
+    ) {
+      errors.email = "Invalid email address";
+    }
+    return errors;
+  }
 
   handleSubmit(event) {
     event.preventDefault();
+    this.validateEmail();
     this.onSubmit = () => ({
       name: this.state.name,
       email: this.state.email,
@@ -32,7 +44,7 @@ export default class ContactForm extends React.Component {
     });
     let data = {
       name: this.state.name,
-      email: this.state.name,
+      email: this.state.email,
       message: this.state.message,
     };
     console.log(data);
