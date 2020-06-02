@@ -3,6 +3,7 @@ import axios from "axios";
 import "./contactform.css";
 
 export default class ContactForm extends React.Component {
+  // states
   constructor(props) {
     super(props);
     this.state = {
@@ -11,6 +12,7 @@ export default class ContactForm extends React.Component {
       message: "",
     };
   }
+  //event handlers for user input in form
   onNameChange(event) {
     this.setState({ name: event.target.value });
   }
@@ -22,6 +24,7 @@ export default class ContactForm extends React.Component {
   onMessageChange(event) {
     this.setState({ message: event.target.value });
   }
+  //check for correct email format eg @ symbol in email and that email is present in contact submission
   validateEmail() {
     let errors = {};
     if (!this.state.email) {
@@ -33,7 +36,7 @@ export default class ContactForm extends React.Component {
     }
     return errors;
   }
-
+  //submit handler
   handleSubmit(event) {
     event.preventDefault();
     this.validateEmail();
@@ -42,12 +45,14 @@ export default class ContactForm extends React.Component {
       email: this.state.email,
       message: this.state.message,
     });
+    //set data variable to pass in api and SMTP
     let data = {
       name: this.state.name,
       email: this.state.email,
       message: this.state.message,
     };
     console.log(data);
+    //using axios to post data to api
     axios
       .post("http://localhost:3100/api/post", data)
       .then((res) => {
@@ -56,6 +61,7 @@ export default class ContactForm extends React.Component {
       .catch(() => {
         console.log("Message Failed");
       });
+    //resets form to blank
     this.setState({
       name: "",
       email: "",
@@ -66,12 +72,14 @@ export default class ContactForm extends React.Component {
 
   render() {
     return (
+      //form
       <div className="ContactForm_Master">
         <form
           id="contact-form"
           onSubmit={this.handleSubmit.bind(this)}
           method="POST"
         >
+          {/* name input */}
           <div className="form-group">
             <input
               type="text"
@@ -81,6 +89,7 @@ export default class ContactForm extends React.Component {
               placeholder="full name"
             />
           </div>
+          {/* email input */}
           <div className="form-group">
             <input
               type="email"
@@ -90,6 +99,7 @@ export default class ContactForm extends React.Component {
               placeholder="email"
             />
           </div>
+          {/* message input  */}
           <div className="form-group">
             <textarea
               className="form-control"
@@ -99,6 +109,7 @@ export default class ContactForm extends React.Component {
               placeholder="message"
             />
           </div>
+          {/* button that runs submit handler */}
           <div className="button">
             <button type="submit" className="btn-primary">
               send it

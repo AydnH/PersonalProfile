@@ -5,6 +5,7 @@ const NavBar = (props) => (
   <header className="navbar">
     <nav className="navbar_navigation">
       <div></div>
+      {/* i was going to use an image as the home page link but decided not to didnt change the name but still does its job */}
       <div className="navbar_logo">
         <a href="/#/Home">Home</a>
       </div>

@@ -7,7 +7,7 @@ export default class Contact extends React.Component {
     return (
       <div id="Contactpage">
         <h1>Contact Me</h1>
-
+        {/* all of the magic happens in the contact form component and server */}
         <ContactForm />
       </div>
     );

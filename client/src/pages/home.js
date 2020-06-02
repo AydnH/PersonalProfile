@@ -4,7 +4,7 @@ import "./css/home.css";
 import About from "../components/blurb";
 import Skills from "../components/textblock";
 import github from "../components/images/GitHub-Mark-Light-64px.png";
-
+//home page uses components inside divs for content syling is done for each component then posittioning of components is controled in home css  file
 export default class Home extends React.Component {
   render() {
     return (
@@ -26,6 +26,7 @@ export default class Home extends React.Component {
               <Skills />
             </div>
           </section>
+          {/* i could have made this contact section its own component but it was just as easy to put it in here not as effecient but still works */}
           <section className="contact_section">
             <div className="contact">
               CONTACT ME
