@@ -8,6 +8,7 @@ const ProfileImg = (props) => (
   <div className="profile_container">
     <div className="profile_image">
       <ExampleComponent
+        //image is a placeholder image as i didnt have any photos of myself that were really appropriate for a portfolio kinda website
         image={placeholder}
         alt="profile image"
         roundedColor="211,211,211"
