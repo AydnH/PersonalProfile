@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Route } from "react-router-dom";
+import { HashRouter, Route, Redirect } from "react-router-dom";
 import "./App.css";
 
 import Home from "./pages/home";
@@ -14,6 +14,7 @@ function App() {
   return (
     <HashRouter basename="/">
       <div className="App">
+        <Redirect from="/" to="/Home" />
         <div className="Background">
           <Sketch />
         </div>
